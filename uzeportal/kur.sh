@@ -1,5 +1,5 @@
-git clone https://github.com/uzeportal/BigBlueButton-Optimize.git
-cd BigBlueButton-Optimize/uzeportal
+git clone https://github.com/uzeportal/bbb.git
+cd bbb/uzeportal
 cp apply-config-sample.sh apply-config.sh
 chmod 755 replace-config.sh
 ./replace-config.sh
