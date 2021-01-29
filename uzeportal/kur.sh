@@ -1,7 +1,6 @@
 cp apply-config-sample.sh apply-config.sh
 chmod 755 replace-config.sh
 ./replace-config.sh
-cd uzeportal
 cp default.pdf /var/www/bigbluebutton-default/
 cp favicon.ico /var/www/bigbluebutton-default/
 cp default.pptx /var/www/bigbluebutton-default/
