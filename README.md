@@ -18,6 +18,8 @@ sudo apt-get install -y xmlstarlet
 git clone https://github.com/uzeportal/bbb.git
 
 cd bbb/uzeportal
+chmod 755 kur.sh
+./kur.sh
 
 cp apply-config-sample.sh apply-config.sh
 chmod 755 replace-config.sh
