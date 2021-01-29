@@ -16,10 +16,9 @@ Xml dosyalarını güncellemek için XMLStarlet ve metin dosyalarını güncelle
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet
 git clone https://github.com/uzeportal/bbb.git
-Firma 1 kurulumu için
+
 cd bbb/uzeportal
-Firma 2 kurulumu için
-cd bbb/firma2
+
 cp apply-config-sample.sh apply-config.sh
 chmod 755 replace-config.sh
 
