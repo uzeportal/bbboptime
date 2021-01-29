@@ -1,4 +1,3 @@
-cd bbb/uzeportal
 cp apply-config-sample.sh apply-config.sh
 chmod 755 replace-config.sh
 ./replace-config.sh
