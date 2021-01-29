@@ -16,7 +16,7 @@ Xml dosyalarını güncellemek için XMLStarlet ve metin dosyalarını güncelle
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet
 git clone https://github.com/uzeportal/bbb.git
-
+cd bbb 
 chmod 755 kur.sh
 ./kur.sh
 
