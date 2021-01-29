@@ -1,3 +1,7 @@
+sudo apt-get update -y
+sudo apt-get install -y xmlstarlet
+git clone https://github.com/uzeportal/bbb.git
+cd bbb/uzeportal
 cp apply-config-sample.sh apply-config.sh
 chmod 755 replace-config.sh
 ./replace-config.sh
