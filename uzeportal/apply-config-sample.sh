@@ -97,7 +97,7 @@ sed -i 's/defaultWelcomeMessage=.*/defaultWelcomeMessage=Merhaba,Uzaktan Egitim 
 sed -i 's/defaultWelcomeMessageFooter=.*/defaultWelcomeMessageFooter=Daha fazla bilgi icin UzePortal.Com/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
 echo "Set disableRecordingDefault"
-sed -i 's/disableRecordingDefault=.*/disableRecordingDefault=false/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
+sed -i 's/disableRecordingDefault=.*/disableRecordingDefault=true/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
 echo "Set webcamsOnlyForModerator"
 sed -i 's/webcamsOnlyForModerator=.*/webcamsOnlyForModerator=true/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
