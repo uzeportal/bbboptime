@@ -1,10 +1,4 @@
 # bbb-optimize
-BigBlueButton sunucunuzu optimize etmek ve sorunsuz bir şekilde çalıştırmak için, kayıt işleme hızını artırma, dinamik video profili, sayfalandırma, ses kalitesini iyileştirme, 1007/1020 hatalarını düzeltme ve apply-config.sh kullanma gibi teknikleri burada bulabilirsiniz.
-
-Bu değişiklikleri yaptıktan sonra BigBlueButton sunucunuzu yeniden başlatmayı unutmayın.
-```sh
-bbb-conf --restart
-``` 
 
 ## Özelleştirmeleri yönetin
 
@@ -20,153 +14,14 @@ cd bbb
 chmod 755 kur.sh
 ./kur.sh
 
-
-cp apply-config-sample.sh apply-config.sh
-chmod 755 replace-config.sh
-
 # PUBLIC_IP'yi BBB sunucunuzun genel IP'sine ayarlamak için apply-config.sh dosyasını düzenleyin
 
-# Değişiklikleri uygulayın ve BBB'yi yeniden başlatın File Zilla Uygulamasını aç dosyayı 755 izinlere getir
-./replace-config.sh
-```
-...
+
 ## NOT Problem Olursa Kullanın Gitup projenizden indirilen ve /root/bbb diye oluşan klasörü sunucudan silmek içindir
 ```sh
 rm -r /bbb
 ```
 
- 
-'apply-config.sh' dosyasını uygun şekilde düzenleyin. Her bir özelleştirmeyle ilgili yorumlar, her birinin anlamını anlamanıza yardımcı olacak ve varsayılan değerleri değiştirebileceksiniz.
-## Markanızla eşleştirin
-```sh
-cp default.pdf /var/www/bigbluebutton-default/
-cp favicon.ico /var/www/bigbluebutton-default/
-cp default.pptx /var/www/bigbluebutton-default/
-cp index.html /var/www/bigbluebutton-default/
-cp tr_TR.json /usr/share/meteor/bundle/programs/server/assets/app/locales/
-cp logo.png /var/bigbluebutton/playback/presentation/2.0/
-cp /sesler/conf-enter_conf_pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-entry_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-exit_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-goodbye.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-has_joined.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-has_left.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-is-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-is-unlocked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-kicked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-listener_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-listeners_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-members_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-number_of_listeners.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-one_other_member_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-one_other_person_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-other_persons_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-unmuted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-welcome.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-you_are_already_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-you_are_now_bidirectionally_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-alone.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-bad-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-conference_is_full.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-conference_is_in_qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-conference_will_start_shortly.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-enter_conf_number.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
-cp /sesler/conf-enter_conf_pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-entry_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-exit_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-goodbye.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-has_joined.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-has_left.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-is-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-is-unlocked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-kicked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-listener_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-listeners_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-members_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-number_of_listeners.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-one_other_member_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-one_other_person_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-other_persons_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-unmuted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-welcome.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-you_are_already_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-you_are_now_bidirectionally_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-alone.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-bad-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-conference_is_full.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-conference_is_in_qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-conference_will_start_shortly.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-enter_conf_number.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/32000/
-cp /sesler/conf-enter_conf_pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-entry_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-exit_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-goodbye.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-has_joined.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-has_left.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-is-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-is-unlocked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-kicked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-listener_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-listeners_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-members_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-number_of_listeners.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-one_other_member_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-one_other_person_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-other_persons_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-unmuted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-welcome.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-you_are_already_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-you_are_now_bidirectionally_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-alone.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-bad-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-conference_is_full.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-conference_is_in_qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-conference_will_start_shortly.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-enter_conf_number.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/16000/
-cp /sesler/conf-enter_conf_pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-entry_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-exit_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-goodbye.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-has_joined.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-has_left.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-is-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-is-unlocked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-kicked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-listener_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-listeners_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-locked.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-members_in_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-number_of_listeners.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-one_other_member_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-one_other_person_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-other_persons_conference.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-unmuted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-welcome.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-you_are_already_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-you_are_now_bidirectionally_muted.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-alone.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-bad-pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-conference_is_full.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-conference_is_in_qna_mode.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-conference_will_start_shortly.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-cp /sesler/conf-enter_conf_number.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/8000/
-bbb-conf --restart
-```
 Varsayılan BigBlueButton kurulumunu markanızla eşleşecek şekilde aşağıdaki şekillerde güncelleyebilirsiniz:
 1. Sunum alanında görünecek varsayılan PDF
 2. Site simgesi olarak görünecek logo (favicon biçimi)
