@@ -24,7 +24,7 @@ sed -i 's/https/http/g'  /etc/bigbluebutton/nginx/sip.nginx
 sed -i 's/7443/5066/g'  /etc/bigbluebutton/nginx/sip.nginx 
 
 echo "Oynatmada Telif Hakkını Ayarlama"
-sed -i "s/defaultCopyright = .*/defaultCopyright = \'<p>uzeportal.com<\/p>\';/g" /var/bigbluebutton/playback/presentation/2.0/playback.js
+sed -i "s/defaultCopyright = .*/defaultCopyright = \'<p>irisakademi.com.tr<\/p>\';/g" /var/bigbluebutton/playback/presentation/2.0/playback.js
 
 #seetings.yml AYARLAR BAŞLIYOR
 #--------------------------------------------------
@@ -35,7 +35,7 @@ echo "Set Client Title"
 sed -i 's/clientTitle:.*/clientTitle: UzePortal/g' /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
 
 echo "Set App Title"
-sed -i 's/appName:.*/appName: UzePortal Uzaktan Egitim Sistemi/g' /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
+sed -i 's/appName:.*/appName: İris Akademi/g' /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
 
 echo "Set Copyright"
 sed -i 's/copyright:.*/copyright: "©2019 UzePortal.Com"/g' /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
