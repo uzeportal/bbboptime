@@ -2,9 +2,10 @@
 # Pull in the helper functions for configuring BigBlueButton
 source /etc/bigbluebutton/bbb-conf/apply-lib.sh
 
+echo "Firewall Ayarlarını yaptırma"
 enableUFWRules
-enableMultipleKurentos
-echo "  - Setting camera defaults"
+
+echo "  - Kamera varsayılanlarını ayarlama"
 yq w -i $HTML5_CONFIG 'public.kurento.cameraProfiles.(id==low).bitrate' 50
 yq w -i $HTML5_CONFIG 'public.kurento.cameraProfiles.(id==medium).bitrate' 100
 yq w -i $HTML5_CONFIG 'public.kurento.cameraProfiles.(id==high).bitrate' 200
@@ -15,8 +16,12 @@ yq w -i $HTML5_CONFIG 'public.kurento.cameraProfiles.(id==medium).default' false
 yq w -i $HTML5_CONFIG 'public.kurento.cameraProfiles.(id==high).default' false
 yq w -i $HTML5_CONFIG 'public.kurento.cameraProfiles.(id==hd).default' false
 
-echo "Running three parallel Kurento media server"
+echo "Üç paralel Kurento medya sunucusunu çalıştırma"
 enableMultipleKurentos
+
+#Üç paralel Kurento medya sunucusunu devredışı bırakmak istenirse
+#echo "Üç paralel Kurento medya sunucusunu çalıştırma"
+#disableMultipleKurentos
 
 echo "Fix till 2.2.30 - https://github.com/bigbluebutton/bigbluebutton/issues/9667"
 yq w -i /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml public.media.sipjsHackViaWs true
