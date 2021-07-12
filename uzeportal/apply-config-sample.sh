@@ -102,7 +102,7 @@ sed -i 's/defaultWelcomeMessage=.*/defaultWelcomeMessage=Merhaba,Uzaktan Egitim 
 sed -i 's/defaultWelcomeMessageFooter=.*/defaultWelcomeMessageFooter=Daha fazla bilgi icin UzePortal.Com/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
 echo "Set disableRecordingDefault"
-sed -i 's/disableRecordingDefault=.*/disableRecordingDefault=false/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
+sed -i 's/disableRecordingDefault=.*/disableRecordingDefault=true/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
 echo "Set webcamsOnlyForModerator"
 sed -i 's/webcamsOnlyForModerator=.*/webcamsOnlyForModerator=true/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
@@ -125,8 +125,8 @@ sed -i 's/muteOnStart=.*/muteOnStart=true/g' /usr/share/bbb-web/WEB-INF/classes/
 echo "Saves meeting events even if the meeting is not recorded"
 sed -i 's/keepEvents=.*/keepEvents=true/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
-#echo "Set maximum users per class to 35"
-#sed -i 's/defaultMaxUsers=.*/defaultMaxUsers=35/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
+echo "Set maximum users per class to 35"
+sed -i 's/defaultMaxUsers=.*/defaultMaxUsers=35/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
 #echo "Disable public chat"
 #sed -i 's/lockSettingsDisablePublicChat=.*/lockSettingsDisablePublicChat=true/g' /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
