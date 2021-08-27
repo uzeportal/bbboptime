@@ -10,7 +10,7 @@ Xml dosyalarını güncellemek için XMLStarlet ve metin dosyalarını güncelle
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet
 git clone https://github.com/uzeportal/bbboptime.git
-cd bbb
+cd bbboptime
 chmod 755 kur.sh
 ./kur.sh
 
