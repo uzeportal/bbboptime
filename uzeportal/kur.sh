@@ -1,7 +1,7 @@
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet
-git clone https://github.com/uzeportal/bbb.git
-cd bbb/uzeportal
+git clone https://github.com/uzeportal/bbboptime.git
+cd bbboptime/uzeportal
 cp apply-config-sample.sh apply-config.sh
 chmod 755 replace-config.sh
 ./replace-config.sh
@@ -9,7 +9,8 @@ cp default.pdf /var/www/bigbluebutton-default/
 cp favicon.ico /var/www/bigbluebutton-default/
 cp default.pptx /var/www/bigbluebutton-default/
 cp index.html /var/www/bigbluebutton-default/
-cp tr_TR.json /usr/share/meteor/bundle/programs/server/assets/app/locales/
+cp tr_TR.json /usr/share/meteor/bundle/programs/web.browser/app/locales
+cp tr_TR.json /usr/share/meteor/bundle/programs/web.browser.legacy/app/locales
 cp logo.png /var/bigbluebutton/playback/presentation/2.0/
 cp ../sesler/conf-enter_conf_pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
 cp ../sesler/conf-entry_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
