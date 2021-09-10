@@ -19,7 +19,7 @@ chmod 755 kur.sh
 
 ## NOT Problem Olursa Kullanın. Gitup projenizden indirilen ve /root/bbboptime diye oluşan klasörü sunucudan silmek içindir
 ```sh
-rm -r /bbboptime
+rm -r bbboptime
 ```
 
 Varsayılan BigBlueButton kurulumunu markanızla eşleşecek şekilde aşağıdaki şekillerde güncelleyebilirsiniz:
