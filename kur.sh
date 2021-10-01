@@ -10,10 +10,6 @@ cp tr_TR.json /usr/share/meteor/bundle/programs/web.browser/app/locales
 cp tr_TR.json /usr/share/meteor/bundle/programs/web.browser.legacy/app/locales
 cp logo.png /var/bigbluebutton/playback/presentation/2.0/
 cp logo.png /var/bigbluebutton/playback/presentation/2.3/
-cp ../mp4/export_presentation.rb /usr/local/bigbluebutton/core/scripts/post_publish/
-cp ../mp4/interval_tree.rb /usr/local/bigbluebutton/core/lib/recordandplayback/
-chmod 777 /usr/local/bigbluebutton/core/scripts/post_publish/export_presentation.rb
-chmod 777 /usr/local/bigbluebutton/core/lib/recordandplayback/interval_tree.rb
 cp ../sesler/conf-enter_conf_pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
 cp ../sesler/conf-entry_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
 cp ../sesler/conf-exit_sound.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
