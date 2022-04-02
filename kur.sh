@@ -12,6 +12,9 @@ cp logo.png /var/bigbluebutton/playback/presentation/2.0/
 cp logo.png /var/bigbluebutton/playback/presentation/2.3/
 cp ../mp4/export_presentation.rb /usr/local/bigbluebutton/core/scripts/post_publish/
 cp ../mp4/interval_tree.rb /usr/local/bigbluebutton/core/lib/recordandplayback/
+cp ../mp4/bigbluebutton /etc/cron.daily/
+cp ../mp4/bbb-recording-cleanup /etc/cron.daily/
+chmod +x /etc/cron.daily/bbb-recording-cleanup
 chmod 777 /usr/local/bigbluebutton/core/scripts/post_publish/export_presentation.rb
 chmod 777 /usr/local/bigbluebutton/core/lib/recordandplayback/interval_tree.rb
 cp ../sesler/conf-enter_conf_pin.wav /opt/freeswitch/share/freeswitch/sounds/en/us/callie/conference/48000/
